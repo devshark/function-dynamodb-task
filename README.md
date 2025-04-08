@@ -27,6 +27,7 @@ This is a simple example of how to use DynamoDB for transactions. It's not meant
 2. That `transact` method isn't supposed to carry the Task 1's case of "100 USD balance". It seems to be the responsible of a different function. 
 3. That `idempotentKey` is the only attribute needed to determine if a transaction already exists. It should be the client's responsibility to ensure they pass unique `idempotentKey` for each request. i.e. `idempotentKey` isn't reused for double-entry ledgers, at least it's different for each side of the account.
 4. That we don't want the running balance for each entry in the `Transactions` table.
+5. Duplicate transactions don't throw errors or update the balance in any way. But if the conflict didn't product any transaction item, it will throw an error.
 
 ## If I had more time, I would:
 
