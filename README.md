@@ -7,7 +7,7 @@ This is a simple example of how to use DynamoDB for transactions. It's not meant
 1. We have two tables: `Users` and `Transactions`.
 2. The `Users` table has a primary unique index on `userId`. Additional optional attributes are `balance` and `currency`.
 3. The `Transactions` table has three attributes: `idempotencyKey`, `userId`, `amount`, `type`, and `timestamp`. Each request is checked if a transaction with the given idempotent key already exists.
-4. We have wrapper functions that returns a facade around DynamoDB operations.
+4. We have wrapper functions that returns a facade around DynamoDB operations. The reason is to create functions that adhere to the required Function signature (input). I want to make the dependencies injectable so it's easier to test. 
 5. Schema definition for creating the tables are in [Schema directory](./src/schema/).
 6. DynamoDB singleton client is [here](./src/db//client.ts)
 7. Seeding for test data is in [Seeding directory](./src/db/seed.ts)
