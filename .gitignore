@@ -1,0 +1,28 @@
+# Ignore node modules
+node_modules/
+
+# Ignore build artifacts
+/dist/
+/bundle/
+
+# Ignore generated files
+/.DS_Store
+
+# Ignore IDE and editor files
+.idea/
+.vscode/
+
+# Ignore test files
+pytest.ini
+tox.ini
+
+# Ignore other miscellaneous files
+npm-debug.log
+yarn-error.log
+
+# Ignore test results
+coverage/
+.env*
+
+# don't commit docker data
+docker/dynamodb/

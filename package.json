@@ -1,0 +1,32 @@
+{
+  "name": "mongo-functions",
+  "version": "1.0.0",
+  "description": "Functions to perform certain tasks",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "migrate": "AWS_ACCESS_KEY_ID=local AWS_SECRET_ACCESS_KEY=local tsx src/schema/index.ts",
+    "seed": "AWS_ACCESS_KEY_ID=local AWS_SECRET_ACCESS_KEY=local tsx src/db/seed.ts",
+    "run:user": "AWS_ACCESS_KEY_ID=local AWS_SECRET_ACCESS_KEY=local tsx src/user/index.ts",
+    "run:transact": "AWS_ACCESS_KEY_ID=local AWS_SECRET_ACCESS_KEY=local tsx src/transact/index.ts"
+  },
+  "author": "anthony.lim",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-typescript": "^7.27.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.14.0",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.3.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.782.0"
+  }
+}
