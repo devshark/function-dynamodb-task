@@ -34,3 +34,7 @@ This is a simple example of how to use DynamoDB for transactions. It's not meant
 1. Write better tests. Mocking feels like a cheat and doesn't really simulate real usage.
 2. Document them better i.e. better and cleaner comments.
 3. Fix the broken tests brought by mocking the Dynamodb calls.
+
+## Author
+
+&copy; Anthony Lim
